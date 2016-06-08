@@ -5,7 +5,7 @@ var url = "mongodb://localhost:27017/test";
 
 var findRestaurants = function(db, callback)
   {
-    var cursor =db.collection("restaurants").find( { "name" : "Juni" } );
+    var cursor =db.collection("restaurants").find( { "grades.score" : { $gt: 30 } } ); //$lt
     cursor.each(function(err, doc)
     {
       assert.equal(err, null);

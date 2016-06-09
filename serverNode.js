@@ -1,4 +1,4 @@
-exports.startNodeServer = function()
+exports.startNodeServer = function() //expose for index to consume
 {
   var fs = require("fs");
   fs.readFile('./helloWorld.html', function (err, html)

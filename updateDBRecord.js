@@ -22,4 +22,4 @@ MongoClient.connect(url, function(err, db) {
   updateRestaurants(db, function() {
     db.close();
   });
-});
+}); 

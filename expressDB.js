@@ -12,4 +12,4 @@ MongoClient.connect('mongodb://localhost:27017/test', function( err, db) {
     }
     console.log(result);
   });
-});
+}); 

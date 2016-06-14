@@ -1,10 +1,20 @@
 doctype html
 html
   head
+    //- Load AngularJS
+    script(src='/node_modules/angular/angular.min.js')
 
-  body
+    //- Load CSS from css folder
+    link(href='/css/helloWorld.css', rel='stylesheet')
+  body(ng-app="myApp")
     div
-      h1.
-        Hello World
-      p.
+      h1(class="header", ng-controller="myController").
+        {{ theMessageForHelloWorld }}
+      p(class="paragraph").
         This is my first MEAN app with Jade Template.
+
+    //- Modules
+    script(src="/angularjs/app.js")
+
+    //- Controllers
+    script(src="/angularjs/myControllers.js")

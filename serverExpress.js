@@ -1,5 +1,7 @@
 //decalre varaibles
 var express = require('express');
+var mongodb = require('mongodb');
+
 var app = express();
 
 //set jade as template engine
@@ -11,6 +13,11 @@ app.use('/html', express.static('helloWorld'));
 app.use('/css', express.static('css'));
 app.use('/angularjs', express.static('angularjs'));
 app.use('/node_modules', express.static('node_modules'));
+
+//set 404 error page
+//app.use(function(req, res, next) {
+//  res.status(404).send('Sorry can\'t find that!')
+//});
 
 //get landing page
 app.get('/html/', function( req, res) {

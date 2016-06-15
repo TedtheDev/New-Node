@@ -12,6 +12,9 @@ html
         {{ theMessageForHelloWorld }}
       p(class="paragraph").
         This is my first MEAN app with Jade Template.
+    div(ng-controller="getRecords")
+      p(ng-repeat="name in restaurants").
+        {{ name }}
 
     //- Modules
     script(src="/angularjs/app.js")

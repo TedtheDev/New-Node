@@ -2,7 +2,7 @@
   "name": "newnode",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "serverExpress.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -12,6 +12,9 @@
     "bower": "^1.7.9",
     "express": "^4.13.4",
     "jade": "^1.11.0",
-    "mongodb": "^2.1.18"
+    "mongodb": "^2.1.18",
+    "mongoose": "^4.5.0",
+    "morgan": "^1.7.0",
+    "nodemon": "^1.9.2"
   }
 }

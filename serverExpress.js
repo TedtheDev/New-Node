@@ -15,9 +15,14 @@ app.use('/angularjs', express.static('angularjs'));
 app.use('/node_modules', express.static('node_modules'));
 
 //set 404 error page
-//app.use(function(req, res, next) {
-//  res.status(404).send('Sorry can\'t find that!')
-//});
+app.use(function(req, res, next) {
+  res.status(404).send('Sorry can\'t find that!')
+});
+
+app.get('/api/getNamesOfRestaurants', function(req, res) {
+
+  res.json(restaurants);
+});
 
 //get landing page
 app.get('/html/', function( req, res) {
@@ -28,5 +33,5 @@ app.get('/html/', function( req, res) {
 
 //run server and listen
 app.listen(3000, function() {
-  console.log('Listening on 3000...');
+  console.log('Listening on 3000......');
 });

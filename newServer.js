@@ -41,7 +41,7 @@ app.get('/api/restaurants', function(req, res) {
 
   MongoClient.connect(url, function(err, db) {
       assert.equal(null, err);
-      db.collection("restaurants").find().toArray(function(err, docs) {
+      db.collection("restaurants").find().limit(5).toArray(function(err, docs) {
         res.json(docs);
         db.close();
       });

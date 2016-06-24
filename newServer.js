@@ -41,7 +41,7 @@ app.use('/node_modules', express.static('node_modules'));
 
 // landing page
 app.get('/', function( req, res) {
-  res.render('helloWorldJade');
+  res.render('index');
 });
 
 //listening

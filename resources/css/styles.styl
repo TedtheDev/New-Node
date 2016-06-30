@@ -1,79 +1,78 @@
 *
   box-sizing: border-box
-
-.col-1-m
-  width: 8.33%
-.col-2-m
-  width: 16.66%
-.col-3-m
-  width: 25%
-.col-4-m
-  width: 33.33%
-.col-5-m
-  width: 41.66%
-.col-6-m
-  width: 50%
-.col-7-m
-  width: 58.33%
-.col-8-m
-  width: 66.66%
-.col-9-m
-  width: 75%
-.col-10-m
-  width: 83.33%
-.col-11-m
-  width: 91.66%
-.col-12-m
-  width: 100%
+//all columns
 [class*="col-"]
-  float: left;
+  width: 100%
+  border: 1px solid red
+  float: left
   padding: 15px
-  border: 1px solid red;
+//mobile
+[class*="col-"]
+  width: 100%
+//desktop width
+@media only screen and (min-width: 768px)
+  .col-1
+    width: 8.33%
+  .col-2
+    width: 16.66%
+  .col-3
+    width: 25%
+  .col-4
+    width: 33.33%
+  .col-5
+    width: 41.66%
+  .col-6
+    width: 50%
+  .col-7
+    width: 58.33%
+  .col-8
+    width: 66.66%
+  .col-9
+    width: 75%
+  .col-10
+    width: 83.33%
+  .col-11
+    width: 91.66%
+  .col-12
+    width: 100%
+
+//set rows
 .row::after
   content: ""
   clear: both
   display: block
 
 .container
-  width: 100%
+  //width: 100%
   height: 100%
-  background-color: blue
-  position: fixed
-  clear: both
+  background-color: #e6f7ff
+  //position: fixed
+  //clear: both
 
 .header
-  width: 100%
+  //width: 100%
   height: 12%
-  background-color: green
+  background-color: #007ab3
   clear: both
 
 .header-text
   font-size: 8vh
 
-.nav-link
-
-
-.main-content
-  height: 80%
-  width: 100%
-  clear: both
-
 .left-nav
-  width: 20%
   height: 100%
-  background-color: red
-  float:left
-  overflow: auto
+  //float:left
+  //overflow: auto
 
+.nav-link
+  background-color: #66ccff
+  margin: 1% 0 1% 0
 .content
-  width:80%
   height: 100%
-  background-color: yellow
-  float: left
-  overflow: auto
+  //float: left
+//  overflow: auto
 
 .footer
-  background-color: purple
-  width: 100%
+  background-color: #007ab3
+  //width: 100%
   height: 8%
   clear: both

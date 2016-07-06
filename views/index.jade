@@ -11,13 +11,14 @@ html(lang="en-US")
     div(class="container")
       header(class="header")
         span(class="header-text") Tyler Edmunds
-      div(class="row")
-        div(class="col-4 nav")
-          div(class="nav-link") About
+      div(class="row" ng-controller="getContent")
+        div(class="col-4 nav" )
+          button(class="nav-link" ng-click="aboutMe()") About
           div(class="nav-link") Portfolio
           div(class="nav-link") Contact
         div(class="col-8 content").
-          contentcontentcontent
+          contentcontentcontent#[br]
+          {{ serveContent }}
       footer(class="footer")
         | footer
 

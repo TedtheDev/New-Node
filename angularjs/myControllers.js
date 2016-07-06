@@ -16,3 +16,15 @@ app.controller('getRestaurants', function($scope, $http) {
   };
 
 });
+
+app.controller('getContent', function($scope, $http) {
+  $scope.aboutMe = function() {
+    $http.get('/views/about.jade')
+      .success(function(html) {
+        $scope.serveContent = html;
+      })
+      .error(function() {
+        console.log('Error: IT DONE DO NOT WORK');
+      });
+  };
+});

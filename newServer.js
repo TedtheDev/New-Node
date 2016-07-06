@@ -38,6 +38,7 @@ app.set('view engine', 'jade');
 app.use('/css', express.static('public/stylesheets'));
 app.use('/angularjs', express.static('angularjs'));
 app.use('/node_modules', express.static('node_modules'));
+app.use('/views', express.static('views'));
 
 // landing page
 app.get('/', function( req, res) {

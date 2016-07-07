@@ -45,6 +45,11 @@ app.get('/', function( req, res) {
   res.render('index');
 });
 
+app.get('/views/:name', function (req, res) {
+  var name = req.params.name;
+  res.render('views/' + name);
+});
+
 //listening
 app.listen(3000, function() {
   console.log('Listening on 3000');

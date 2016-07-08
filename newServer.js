@@ -47,7 +47,7 @@ app.get('/', function( req, res) {
 
 app.get('/views/:name', function (req, res) {
   var name = req.params.name;
-  res.render('views/' + name);
+  res.render(__dirname + '/views/' + name);
 });
 
 //listening

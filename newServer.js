@@ -7,6 +7,9 @@ var nib = require('nib');
 var path = require('path');
 
 
+var server_port = process.env.OPENSHIFT_NODEJS_PORT || 8080;
+var server_ip_address = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1';
+
 // This must be BEFORE other app.use
 //this function is to compile stylus file into css
 function compile(str, path) {
@@ -51,8 +54,8 @@ app.get('/views/:name', function (req, res) {
 });
 
 //listening
-app.listen(3000, function() {
-  console.log('Listening on 3000');
+app.listen(server_port, server_ip_address, function() {
+  console.log('Listening on ' + server_ip_address + ', server port ' + server_port);
 });
 
 //api to get restaurants

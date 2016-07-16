@@ -1,8 +1,8 @@
 {
   "name": "newnode",
   "version": "1.0.0",
-  "description": "",
-  "main": "node newServer.js",
+  "description": "personal website",
+  "main": "newServer.js",
   "scripts": {
     "start": "node newServer.js"
   },

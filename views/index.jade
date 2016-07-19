@@ -14,12 +14,12 @@ html(lang="en-US")
       header(class="header")
         span(class="header-text") Tyler Edmunds
       div(class="row" ng-controller="getContentViews")
-        div(class="col-4 nav" )
-          button(class="nav-link" display='block' ng-click="homeView()") Home
-          button(class="nav-link" ng-click="aboutMeView()") About
+        div(class="col-2 nav" )
+          div(class="nav-link" display='block' ng-click="homeView()") Home
+          div(class="nav-link" ng-click="aboutMeView()") About
           div(class="nav-link") Portfolio
           div(class="nav-link") Contact
-        div(class="col-8 content" ng-bind-html="serveContent")
+        div(class="col-10 content" ng-init="homeView()" ng-bind-html="serveContent")
       footer(class="footer")
         | footer
 

@@ -61,11 +61,27 @@
 .left-nav
   height: 100%
   //float:left
-  //overflow: auto
+  overflow: auto
 
 .nav-link
   background-color: #66ccff
-  margin: 1% 0 1% 0
+  margin: 4% 0 4% 0
+  padding: 2%
+  width: 30%
+  height: 28px
+  cursor: pointer
+  -webkit-transition: height 1s, width 1s
+  transition: height 1s, width 1s
+  -webkit-transition-timing-function: cubic-bezier(0,0,0,1)
+  transition-timing-function: cubic-bezier(0,0,0,1)
+  border-radius: 100px
+  text-align: center
+
+.nav-link:hover
+  width: 100%
+  height: 56px
+  font-size: 150%
+
 .content
   height: 100%
   //float: left

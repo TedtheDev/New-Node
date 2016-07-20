@@ -1,24 +1,3 @@
-app.controller('myController', function($scope) {
-  $scope.theMessageForHelloWorld = "Hello World from AngularJS";
-});
-
-/*
-var firstLoad;
-app.controller('firstLoad', function($scope, $http) {
-  firstLoad = 0;
-  if(firstLoad <= 0){
-    $http.get('/views/home')
-      .success(function(html) {
-        $scope.firstInitialLoad = html;
-        firstLoad = 1;
-      })
-      .error(function() {
-        console.log('Error: IT DOESNT WORK');
-      });
-  }
-});
-*/
-
 app.controller('getRestaurants', function($scope, $http) {
   $scope.getRestaurants = function() {
     $http.get('/api/restaurants')
@@ -32,6 +11,19 @@ app.controller('getRestaurants', function($scope, $http) {
       });
   };
 
+});
+
+app.controller('getPortfolioProjectInfo', function($scope, $http, $compile) {
+  //get about.jade
+  $scope.getProjectInfo = function() {
+    $http.get('/views/firstWebsite')
+      .success(function(html) {
+        $scope.servePortfolioProject = html;
+      })
+      .error(function() {
+        console.log('Error: IT DOESNT WORK');
+      });
+  };
 });
 
 app.controller('getContentViews', function($scope, $http, $compile) {
@@ -49,6 +41,17 @@ app.controller('getContentViews', function($scope, $http, $compile) {
   //get home.jade
   $scope.homeView = function() {
     $http.get('/views/home')
+      .success(function(html) {
+        $scope.serveContent = html;
+      })
+      .error(function() {
+        console.log('Error: IT DOESNT WORK');
+      });
+  };
+
+  //get portfolio.jade
+  $scope.portfolioView = function() {
+    $http.get('/views/portfolio')
       .success(function(html) {
         $scope.serveContent = html;
       })

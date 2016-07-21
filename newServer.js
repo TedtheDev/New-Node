@@ -42,6 +42,7 @@ app.use('/css', express.static('public/stylesheets'));
 app.use('/angularjs', express.static('angularjs'));
 app.use('/node_modules', express.static('node_modules'));
 app.use('/views', express.static('views'));
+app.use('/projects', express.static('views/projects'));
 
 // landing page
 app.get('/', function( req, res) {
@@ -51,6 +52,11 @@ app.get('/', function( req, res) {
 app.get('/views/:name', function (req, res) {
   var name = req.params.name;
   res.render(__dirname + '/views/' + name);
+});
+
+app.get('/projects/:name', function (req, res) {
+  var name = req.params.name;
+  res.render(__dirname + '/views/projects/' + name);
 });
 
 //listening

@@ -1,7 +1,8 @@
 div(ng-controller="getPortfolioProjectInfo")  
   div(class="row" )
-    div(class="col-6 projectButton" ng-click="getProjectInfo()") First Website
-    div(class="col-6 projectButton" ) Web Content Management System
+    div(class="col-12")
+      div(class="projectButton" ng-click="loadProject('firstWebsite')") First Website
+      div(class="projectButton" ng-click="loadProject('wordpress')") Web Content Management System
   div(class="row")
-    div(class="col-12" ) {{ servePortfolioProject }}
+    div(class="col-12" ng-include="servePortfolioProject")
     

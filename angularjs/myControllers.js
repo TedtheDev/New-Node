@@ -10,53 +10,17 @@ app.controller('getRestaurants', function($scope, $http) {
         console.log('Error: ' + data);
       });
   };
-
 });
 
-app.controller('getPortfolioProjectInfo', function($scope, $http, $compile) {
-  //get about.jade
-  $scope.getProjectInfo = function() {
-    $http.get('/views/firstWebsite')
-      .success(function(html) {
-        $scope.servePortfolioProject = html;
-      })
-      .error(function() {
-        console.log('Error: IT DOESNT WORK');
-      });
-  };
-});
 
-app.controller('getContentViews', function($scope, $http, $compile) {
-  //get about.jade
-  $scope.aboutMeView = function() {
-    $http.get('/views/about')
-      .success(function(html) {
-        $scope.serveContent = html;
-      })
-      .error(function() {
-        console.log('Error: IT DOESNT WORK');
-      });
+app.controller('getPortfolioProjectInfo', ['$scope', function($scope) {
+  $scope.loadProject = function(projectName) {
+    $scope.servePortfolioProject = 'projects/' + projectName;
   };
+}]);
 
-  //get home.jade
-  $scope.homeView = function() {
-    $http.get('/views/home')
-      .success(function(html) {
-        $scope.serveContent = html;
-      })
-      .error(function() {
-        console.log('Error: IT DOESNT WORK');
-      });
+app.controller('getTemplate', ['$scope', function($scope) {
+  $scope.loadTemplate = function(templateName) {
+    $scope.serveContent = '/views/'+templateName;
   };
-
-  //get portfolio.jade
-  $scope.portfolioView = function() {
-    $http.get('/views/portfolio')
-      .success(function(html) {
-        $scope.serveContent = html;
-      })
-      .error(function() {
-        console.log('Error: IT DOESNT WORK');
-      });
-  };
-});
+}]);

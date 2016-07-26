@@ -15,7 +15,7 @@ app.controller('getRestaurants', function($scope, $http) {
 
 app.controller('getPortfolioProjectInfo', ['$scope', function($scope) {
   $scope.loadProject = function(projectName) {
-    $scope.servePortfolioProject = 'projects/' + projectName;
+    $scope.servePortfolioProject = '/projects/' + projectName;
   };
 }]);
 

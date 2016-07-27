@@ -1,5 +1,10 @@
-div
+div(ng-controller="loadAllProjects")
   div(class="row")
-    div(class"col-12")
-      p
-        | project Full
+    div(class="col-12")
+      div(ng-include="firstWebsite")
+      div(ng-include="wordpress")
+      div(ng-include="esssProject")
+      div(id='payrollSystem' ng-include="payrollSystem")
+      div(ng-include="lampProject")
+      div(ng-include="lanProject")
+      div(ng-include="nodeWebsite")

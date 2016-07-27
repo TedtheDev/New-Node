@@ -4,9 +4,10 @@ div(ng-controller="getPortfolioProjectInfo")
       div(class="projectButton" ng-click="loadProject('firstWebsite')") First Website
       div(class="projectButton" ng-click="loadProject('wordpress')") Web Content Management System
       div(class="projectButton" ng-click="loadProject('esssProject')") Employee Self-Service System
-      div(class="projectButton" ng-click="loadProject('lanProject')") LAN with Firewall Project
       div(class="projectButton" ng-click="loadProject('payrollSystem')") Payroll System
-      div(class="projectButton" ng-click="loadProject('nodeWebsite')") New Website
+      div(class="projectButton" ng-click="loadProject('payrollSystem')") LAMP Project
+      div(class="projectButton" ng-click="loadProject('lanProject')") LAN with Firewall Project
+      div(class="projectButton" ng-click="#payrollSystem") New Website
   div(class="row")
-    div(class="col-12" ng-include="servePortfolioProject")
+    div(class="col-12" ng-include="loadProjectFull")
     

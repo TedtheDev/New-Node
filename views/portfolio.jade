@@ -1,4 +1,4 @@
-div(ng-controller="getPortfolioProjectInfo")  
+div(ng-controller="getPortfolioProjectInfo" class="portfolio-full")  
   div(class="row" )
     div(class="col-12")
       div(class="projectButton" ng-click="loadProject('firstWebsite')") First Website
@@ -8,6 +8,6 @@ div(ng-controller="getPortfolioProjectInfo")
       div(class="projectButton" ng-click="loadProject('payrollSystem')") LAMP Project
       div(class="projectButton" ng-click="loadProject('lanProject')") LAN with Firewall Project
       div(class="projectButton" ng-click="#payrollSystem") New Website
-  div(class="row")
-    div(class="col-12" ng-include="loadProjectFull")
+  div(class="row" style="height: 100%")
+    div(class="col-12 project-content" ng-include="loadProjectFull")
     

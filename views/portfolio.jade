@@ -1,13 +1,13 @@
 div(ng-controller="getPortfolioProjectInfo" class="portfolio-full")  
   div(class="row" )
     div(class="col-12")
-      div(class="projectButton" ng-click="loadProject('firstWebsite')") First Website
-      div(class="projectButton" ng-click="loadProject('wordpress')") Web Content Management System
-      div(class="projectButton" ng-click="loadProject('esssProject')") Employee Self-Service System
-      div(class="projectButton" ng-click="loadProject('payrollSystem')") Payroll System
-      div(class="projectButton" ng-click="loadProject('payrollSystem')") LAMP Project
-      div(class="projectButton" ng-click="loadProject('lanProject')") LAN with Firewall Project
-      div(class="projectButton" ng-click="#payrollSystem") New Website
+      div(class="project-button") First Website
+      div(class="project-button") Web Content Management System
+      div(class="project-button") Employee Self-Service System
+      div(class="project-button") Payroll System
+      div(class="project-button") LAMP Project
+      div(class="project-button") LAN with Firewall Project
+      div(class="project-button") New Website
   div(class="row" style="height: 100%")
     div(class="col-12 project-content" ng-include="loadProjectFull")
     

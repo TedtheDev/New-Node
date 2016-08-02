@@ -3,11 +3,11 @@ div(ng-controller="getPortfolioProjectInfo" class="portfolio-full")
     div(class="col-12")
       div(class="project-button") First Website
       div(class="project-button") Web Content Management System
-      div(class="project-button") Employee Self-Service System
+      div(class="project-button" href="#lanProject") Employee Self-Service System
       div(class="project-button") Payroll System
       div(class="project-button") LAMP Project
-      div(class="project-button") LAN with Firewall Project
+      div(class="project-button" href="#lanProject") LAN with Firewall Project
       div(class="project-button") New Website
   div(class="row" style="height: 100%")
-    div(class="col-12 project-content" ng-include="loadProjectFull")
+    div(class="col-12 project-content" ng-include="loadProjectFull" full-page)
     

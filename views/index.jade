@@ -16,11 +16,14 @@ html(lang="en-US")
         span(class="header-text") Tyler Edmunds
       div(class="row content-box" ng-controller="getTemplate")
         nav(class="col-2 nav")
-          div(class="nav-link" ng-click="loadTemplate('home')") Home
-          div(class="nav-link" ng-click="loadTemplate('about')") About
-          div(class="nav-link" ng-click="loadTemplate('portfolio')") Portfolio
-          div(class="nav-link" ng-click="loadTemplate('github')") GitHub
-          div(class="nav-link" ng-click="loadTemplate('contact')") Contact
+          div(class="nav-drop-down-section")
+            select(class="nav-drop-down-select" ng-model="selectedNavLink" ng-options="navOption for navOption in navOptions" ng-change="loadTemplateOnChange(selectedNavLink)")
+          div(class="nav-links-section")
+            div(class="nav-link" ng-click="loadTemplate('home')") Home
+            div(class="nav-link" ng-click="loadTemplate('about')") About
+            div(class="nav-link" ng-click="loadTemplate('portfolio')") Portfolio
+            div(class="nav-link" ng-click="loadTemplate('github')") GitHub
+            div(class="nav-link" ng-click="loadTemplate('contact')") Contact
         div(class="col-10 content" ng-init="loadTemplate('home')" ng-include="serveContent")
       footer(class="footer")
 

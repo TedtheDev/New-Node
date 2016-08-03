@@ -12,7 +12,6 @@ app.controller('getRestaurants', function($scope, $http) {
   };
 });
 
-
 app.controller('getPortfolioProjectInfo', ['$scope', function($scope) {
   $scope.loadProject = function(projectName) {
     $scope.servePortfolioProject = 'projects/' + projectName;
@@ -30,8 +29,14 @@ app.controller('loadAllProjects', [ '$scope', function($scope) {
   $scope.nodeWebsite = 'projects/nodeWebsite';
 }]);
 
-app.controller('getTemplate', ['$scope', function($scope) {
+app.controller('getTemplate', ['$scope', '$filter', function($scope,$filter) {
   $scope.loadTemplate = function(templateName) {
     $scope.serveContent = '/views/'+templateName;
   };
+  $scope.loadTemplateOnChange = function(selectedNavLink) {
+    if(selectedNavLink != null && selectedNavLink != "") {
+      $scope.loadTemplate($filter('lowercase')(selectedNavLink));
+    }
+  };
+  $scope.navOptions = ['Home', 'About', 'Portfolio', 'Github', 'Contact'];
 }]);

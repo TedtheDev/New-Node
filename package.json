@@ -9,6 +9,7 @@
   "author": "Ted",
   "license": "ISC",
   "dependencies": {
+    "angular-fullpage.js": "^0.2.3",
     "bower": "^1.7.9",
     "express": "^4.13.4",
     "jade": "^1.11.0",

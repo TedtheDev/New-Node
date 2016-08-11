@@ -5,6 +5,9 @@ width-transition-seconds(sec)
 transition-timing-cybic-bezier(n1,n2,n3,n4)
   -webkit-transition-timing-function: cubic-bezier(n1,n2,n3,n4)
   transition-timing-function: cubic-bezier(n1,n2,n3,n4)
+nav-menu-mobile-transition(sec)
+  -webkit-transition: sec linear all
+  transition: sec lindear all
 
 //css
 html, body
@@ -55,7 +58,7 @@ html, body
   height: 40px
   line-height: 50%
   cursor: pointer
-  width-transition-seconds(1s)
+  width-transition-seconds(.5s)
   transition-timing-cybic-bezier(0,0,0,1)
   border-radius: 100px
   text-align: center
@@ -69,6 +72,33 @@ html, body
 
 .nav-drop-down-select
   width: 100%
+
+.nav-menu-mobile
+  width: 100%
+  background-color: yellow
+
+.nav-menu-mobile.ng-enter
+  nav-menu-mobile-transition(.5s)
+  opacity: 0
+
+.nav-menu-mobile.ng-enter.ng-enter-active
+  opacity: 1
+
+.nav-menu-mobile.ng-leave
+  nav-menu-mobile-transition(.5s)
+  opacity: 1
+
+.nav-menu-mobile.ng-leave.ng-leave-active
+  opacity: 0
+
+.hamburger-menu:hover
+  animation-name: moveHamburger
+  animation-duration: 2s
+
+@keyframes moveHamburger {
+  0% { left: 0%; top: 0%}
+  100% { left 100%; top: 0%}
+}
 
 .portfolio-full
   height: 100%

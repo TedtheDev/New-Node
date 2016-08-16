@@ -1,1 +1,1 @@
-var app = angular.module("myApp", ['fullPage.js', 'ngAnimate']);
+var app = angular.module("myApp", ['ngAnimate']);

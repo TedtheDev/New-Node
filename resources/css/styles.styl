@@ -13,9 +13,12 @@ nav-menu-mobile-transition(sec)
 html, body
   height: 100%
   width: 100%
+  margin: 0
+  padding: 0
 
 *
   box-sizing: border-box
+
 //all columns
 [class*="col-"]
   width: 100%
@@ -38,7 +41,7 @@ html, body
   background-color: #e6f7ff
 
 .header
-  //width: 100%
+  width: 100%
   height: 15%
   background-color: #007ab3
   clear: both
@@ -73,6 +76,57 @@ html, body
 .nav-drop-down-select
   width: 100%
 
+.nav-menu-mobile-toggle, .nav-menu-mobile-toggle-open
+  width: 50px
+  height: 50px
+  position: relative
+  margin: 0px auto 0px 0px
+  transform: rotate(0deg);
+  transition .5s ease-in-out
+  cursor: pointer
+
+.nav-menu-mobile-toggle span, .nav-menu-mobile-toggle-open span
+  display: block
+  opacity: 1
+  left: 0
+  background-color: green
+  position: absolute
+  width: 100%
+  border-radius: 10px
+  height: 6px
+  text-indent: 100%
+  white-space: nowrap
+  overflow: hidden
+  transform: rotate(0deg);
+  transition .25s ease-in-out
+
+.nav-menu-mobile-toggle span:nth-child(1)
+  top: 0px
+
+.nav-menu-mobile-toggle span:nth-child(2)
+  top: 10px
+
+.nav-menu-mobile-toggle span:nth-child(3)
+  top: 20px
+
+//-------
+.nav-menu-mobile-toggle-open span:nth-child(1)
+  top: 10px
+  left: 5px
+  width: 50%
+  transform: rotate(90deg);
+
+.nav-menu-mobile-toggle-open span:nth-child(2)
+  opacity: 0
+  left: 250px
+  top: 10px
+
+.nav-menu-mobile-toggle-open span:nth-child(3)
+  top: 10px
+  left: -5px
+  width: 50%
+  transform: rotate(-90deg);
+
 .nav-menu-mobile
   width: 100%
   background-color: yellow
@@ -91,14 +145,16 @@ html, body
 .nav-menu-mobile.ng-leave.ng-leave-active
   opacity: 0
 
-.hamburger-menu:hover
-  animation-name: moveHamburger
-  animation-duration: 2s
-
-@keyframes moveHamburger {
-  0% { left: 0%; top: 0%}
-  100% { left 100%; top: 0%}
+@keyframes moveLine {
+  to { stroke-dashoffset: 25}
 }
+
+#ham-line-one
+  stroke-dasharray: 15
+  animation: moveLine 2s linear forward
+
+.hamburger-menu:hover
+  cursor: pointer
 
 .portfolio-full
   height: 100%
@@ -109,9 +165,10 @@ html, body
 
 .content
   height: 100%
+  word-wrap: break-word
 
 .content-box
-  height: 80%
+  height: 100%
 
 .project-button
   display: inline
@@ -121,11 +178,5 @@ html, body
   background-color: #66ccff
   padding: 1%
   margin: 1%
-
-.footer
-  background-color: #007ab3
-  //width: 100%
-  height: 15%
-  clear: both
 
 @import "stylesMediaQueries.styl"

@@ -38,5 +38,14 @@ app.controller('getTemplate', ['$scope', '$filter', function($scope,$filter) {
       $scope.loadTemplate($filter('lowercase')(selectedNavLink));
     }
   };
-  $scope.navOptions = ['Home', 'About', 'Portfolio', 'Github', 'Contact'];
+  //$scope.navOptions = ['Home', 'About', 'Portfolio', 'Github', 'Contact'];
+  $scope.navMenuClass = "nav-menu-mobile-toggle";
+  $scope.changeClass = function(className) {
+    if(className == "nav-menu-mobile-toggle") {
+      $scope.navMenuClass = "nav-menu-mobile-toggle-open";
+    }
+    else {
+      $scope.navMenuClass = "nav-menu-mobile-toggle"
+    }
+  };
 }]);

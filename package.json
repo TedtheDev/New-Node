@@ -9,6 +9,7 @@
   "author": "Ted",
   "license": "ISC",
   "dependencies": {
+    "angular-ui-router": "^0.3.1",
     "bower": "^1.7.9",
     "express": "^4.13.4",
     "jade": "^1.11.0",
@@ -18,6 +19,6 @@
     "nib": "^1.1.0",
     "nodemon": "^1.9.2",
     "path": "^0.12.7",
-    "stylus": "^0.54.5"
+    "stylus": "^0.54.5",
   }
 }

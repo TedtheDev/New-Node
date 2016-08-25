@@ -29,7 +29,15 @@ app.controller('loadAllProjects', [ '$scope', function($scope) {
   $scope.nodeWebsite = 'projects/nodeWebsite';
 }]);
 
-app.controller('getTemplate', ['$scope', '$filter', function($scope,$filter) {
+app.controller('mobileMenuController', ['$scope', function ($scope){
+  $scope.navSlideMenu = "nav-mobile-placeholder nav-mobile-placeholder-visible";
+  $scope.slideOut = function(className) {
+    var test = className;
+    $scope.navSlideMenu = "nav-mobile-placeholder nav-mobile-placeholder-animate nav-mobile-placeholder-visible";
+  };
+}]);
+
+app.controller('getTemplate', ['$scope', '$filter', '$state', function($scope, $filter, $state) {
   $scope.loadTemplate = function(templateName) {
     $scope.serveContent = '/views/'+templateName;
   };
@@ -39,6 +47,7 @@ app.controller('getTemplate', ['$scope', '$filter', function($scope,$filter) {
     }
   };
   //$scope.navOptions = ['Home', 'About', 'Portfolio', 'Github', 'Contact'];
+  $state.go('home');
   $scope.navMenuClass = "nav-menu-mobile-toggle";
   $scope.changeClass = function(className) {
     if(className == "nav-menu-mobile-toggle") {

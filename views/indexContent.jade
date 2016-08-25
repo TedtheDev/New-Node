@@ -3,9 +3,8 @@ div(class="container")
     span(class="header-text") Tyler Edmunds
   div(class="row content-box" ng-controller="getTemplate")
     nav(class="col-2 nav")
-      div(class="nav-drop-down-section") 
-        span(class-="nav-menu-mobile-toggle" ng-click='toggleMobileNav=!toggleMobileNav')
-        //select(class="nav-drop-down-select" ng-model="selectedNavLink" ng-options="navOption for navOption in navOptions" ng-change="loadTemplateOnChange(selectedNavLink)")
+      div(class="nav-drop-down-section")
+        div(ng-click="slideOut(navSlideMenu)") ++++
         div(ng-class="navMenuClass" ng-click='toggleMobileNav=!toggleMobileNav; changeClass(navMenuClass)')
           span hamburger top
           span hamber mid
@@ -19,7 +18,7 @@ div(class="container")
           div(ui-sref="about" class="nav-test" ng-click="loadTemplate('about'); toggleMobileNav=!toggleMobileNav") About
           div(ui-sref="portfolio" class="nav-test" ng-click="loadTemplate('portfolio'); toggleMobileNav=!toggleMobileNav") Portfolio
           div(ui-sref="github" class="nav-test" ng-click="loadTemplate('github'); toggleMobileNav=!toggleMobileNav") GitHub
-          div(ui-sref="contact" class="nav-test" ng-click="loadTemplate('contact'); toggleMobileNav=!toggleMobileNav") Contact
+          div(class="nav-test" ng-click="loadTemplate('contact'); toggleMobileNav=!toggleMobileNav") Contact
       div(class="nav-links-section")
         div(ui-sref="home" class="nav-link" ng-click="loadTemplate('home')") Home
         div(ui-sref="about" class="nav-link" ng-click="loadTemplate('about')") About

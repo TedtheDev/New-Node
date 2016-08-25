@@ -1,0 +1,50 @@
+.nav-mobile-placeholder
+  position: fixed
+  left: 0
+  top: 0
+  width: 100%
+  height: 100%
+  pointer-events: none
+  overflow: hidden
+  z-index: 1
+
+.nav-mobile-placeholder-visible
+  pointer-events: auto
+
+.nav-menu-content
+  background-color: #fff
+  color: #fff
+  position: relative
+  max-width: 300px
+  width: 90%
+  height: 100%
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5)
+  transform: translateX(-103%)
+  display: flex
+  will-change: transform
+  z-index: 2
+  pointer-events: auto
+
+.nav-mobile-placeholder-animate .nav-menu-content
+  transition: all 130ms ease-in
+
+.nav-mobile-placeholder-visible.nav-mobile-placeholder-animate .nav-menu-content
+  transition: all 330ms ease-out
+
+.nav-mobile-placeholder:after
+  content: ''
+  display: block
+  position: absolute
+  left: 0
+  top: 0
+  width: 100%
+  height: 100%
+  background: rgba(0,0,0,0.4)
+  opacity: 0
+  will-change: opacity
+  pointer-events: none
+  transition: opacity .3s cubic-bezier(0,0,0.3,1)
+
+.nav-mobile-placeholder-visible.nav-mobile-placeholder:after
+  opacity: 1
+  pointer-events: auto

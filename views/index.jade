@@ -11,7 +11,8 @@ html(lang="en-US")
     meta(name="viewport" content="width=device-width, initial-scale=1")
     //- Load CSS from css folder
     link(href='./css/styles.css', rel='stylesheet')
-  body(ng-app="myApp")
+  body(ng-app="myApp" ng-controller="mobileMenuController")
+    div(ui-view="mobileMenu")
     div(ui-view="index" class="container")
     
     //- Modules

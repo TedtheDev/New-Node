@@ -10,6 +10,9 @@ app.config(function($stateProvider) {
       views: {
         "index": {
           templateUrl: "/views/indexContent"
+        },
+        "mobileMenu": {
+          templateUrl: "/views/mobileMenu"
         }
       }
     })

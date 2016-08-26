@@ -30,10 +30,14 @@ app.controller('loadAllProjects', [ '$scope', function($scope) {
 }]);
 
 app.controller('mobileMenuController', ['$scope', function ($scope){
-  $scope.navSlideMenu = "nav-mobile-placeholder nav-mobile-placeholder-visible";
+  $scope.navSlideMenu = "menu";
   $scope.slideOut = function(className) {
     var test = className;
-    $scope.navSlideMenu = "nav-mobile-placeholder nav-mobile-placeholder-animate nav-mobile-placeholder-visible";
+    $scope.navSlideMenu = "menu menu-animate menu-visible";
+  };
+  $scope.slideIn = function(className) {
+    var test = className;
+    $scope.navSlideMenu = "menu menu-animate";
   };
 }]);
 
@@ -46,7 +50,6 @@ app.controller('getTemplate', ['$scope', '$filter', '$state', function($scope, $
       $scope.loadTemplate($filter('lowercase')(selectedNavLink));
     }
   };
-  //$scope.navOptions = ['Home', 'About', 'Portfolio', 'Github', 'Contact'];
   $state.go('home');
   $scope.navMenuClass = "nav-menu-mobile-toggle";
   $scope.changeClass = function(className) {

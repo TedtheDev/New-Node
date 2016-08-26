@@ -1,4 +1,3 @@
-div(ng-class="navSlideMenu")
-  div(class="nav-menu-content" )
-    ui
-      li test
+div(ng-click="slideIn(navSlideMenu)" ng-class="navSlideMenu")
+  div(class="app-menu" )
+    div(ui-sref="contact" class="nav-test" ng-click="toggleMobileNav=!toggleMobileNav") Contact

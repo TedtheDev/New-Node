@@ -1,3 +1,7 @@
 div(ng-click="slideIn(navSlideMenu)" ng-class="navSlideMenu")
   div(class="app-menu" )
+    div(ui-sref="home" class="nav-test" ng-click="toggleMobileNav=!toggleMobileNav") Home
+    div(ui-sref="about" class="nav-test" ng-click="toggleMobileNav=!toggleMobileNav") About
+    div(ui-sref="portfolio" class="nav-test" ng-click="toggleMobileNav=!toggleMobileNav") Portfolio
+    div(ui-sref="github" class="nav-test" ng-click="toggleMobileNav=!toggleMobileNav") GitHub
     div(ui-sref="contact" class="nav-test" ng-click="toggleMobileNav=!toggleMobileNav") Contact

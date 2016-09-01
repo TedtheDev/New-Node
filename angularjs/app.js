@@ -1,8 +1,5 @@
 var app = angular.module("myApp", ['ngAnimate','ui.router']);
 
-
-
-
 app.config(function($stateProvider) {
   $stateProvider
     .state('index',  {

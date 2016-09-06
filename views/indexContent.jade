@@ -4,8 +4,9 @@ div(class="container")
   div(class="row content-box" ng-controller="getTemplate")
     nav(class="col-2 nav")
       div(class="nav-drop-down-section")
-        div(ng-click="slideOut(navSlideMenu)") ++++
-        div(ng-class="navMenuClass" ng-click='toggleMobileNav=!toggleMobileNav; changeClass(navMenuClass)')
+        //div(ng-click="slideOut(navSlideMenu)") ++++
+        //div(ng-class="navMenuClass" ng-click='toggleMobileNav=!toggleMobileNav; changeClass(navMenuClass)')
+        div(ng-class="navMenuClass" ng-click='slideOut(navSlideMenu)')
           span hamburger top
           span hamber mid
           span hamburger bot
@@ -13,14 +14,14 @@ div(class="container")
             //path(id="ham-line-one" d="M 0 4 L 40 4" stroke="rgb(100,100,100)" stroke-width="4" fill="none")
             //path(id="ham-line-two" d="M 0 15 L 40 15" stroke="rgb(100,100,100)" stroke-width="4" fill="none")
             //path(id="ham-line-three" d="M 0 26 L 40 26" stroke="rgb(100,100,100)" stroke-width="4" fill="none")
-        div(class='nav-menu-mobile' ng-if='toggleMobileNav')
-          div(ui-sref="home" class="nav-test" ng-click="toggleMobileNav=!toggleMobileNav") Home
-          div(ui-sref="about" class="nav-test" ng-click="toggleMobileNav=!toggleMobileNav") About
-          div(ui-sref="portfolio" class="nav-test" ng-click="toggleMobileNav=!toggleMobileNav") Portfolio
-          div(ui-sref="github" class="nav-test" ng-click="toggleMobileNav=!toggleMobileNav") GitHub
-          div(ui-sref="contact" class="nav-test" ng-click="toggleMobileNav=!toggleMobileNav") Contact
+        //div(class='nav-menu-mobile' ng-if='toggleMobileNav')
+          //div(ui-sref="home" class="nav-test" ng-click="toggleMobileNav=!toggleMobileNav") Home
+          //div(ui-sref="about" class="nav-test" ng-click="toggleMobileNav=!toggleMobileNav") About
+          //div(ui-sref="portfolio" class="nav-test" ng-click="toggleMobileNav=!toggleMobileNav") Portfolio
+          //div(ui-sref="github" class="nav-test" ng-click="toggleMobileNav=!toggleMobileNav") GitHub
+          //div(ui-sref="contact" class="nav-test" ng-click="toggleMobileNav=!toggleMobileNav") Contact
       div(class="nav-links-section")
-        div(ui-sref="home" class="nav-link" ) Home
+        div(ui-sref="home" class="nav-link") Home
         div(ui-sref="about" class="nav-link" ) About
         div(ui-sref="portfolio" class="nav-link" ) Portfolio
         div(ui-sref="github" class="nav-link" ) GitHub

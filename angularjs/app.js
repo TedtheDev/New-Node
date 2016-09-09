@@ -85,7 +85,7 @@ app.config(function($stateProvider) {
         }
       }
     })
-    .state('payrollsystem', {
+    .state('payrollSystem', {
       parent: "portfolio",
       url: '/payrollsystem',
       views: {

@@ -1,6 +1,12 @@
 div(class="container")
   header(class="header")
     div(class="header-text") Tyler Edmunds
+    nav(class='header-nav')
+      div(ui-sref="home" class="header-nav-button") Home
+      div(ui-sref="about" class="header-nav-button" ) About
+      div(ui-sref="portfolio" class="header-nav-button" ) Portfolio
+      div(ui-sref="github" class="header-nav-button" ) GitHub
+      div(ui-sref="contact" class="header-nav-button" ) Contact
   div(class="row content-box" ng-controller="getTemplate")
     nav(class="col-2 nav")
       div(class="nav-drop-down-section")

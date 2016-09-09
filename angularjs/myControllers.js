@@ -17,6 +17,11 @@ app.controller('getPortfolioProjectInfo', ['$scope', function($scope) {
     $scope.servePortfolioProject = 'projects/' + projectName;
   };
   $scope.loadProjectFull = 'views/projectFull';
+
+  $scope.resetProjectMenu = function(booleanToggle) {
+    booleanToggle = false;
+    return booleanToggle;
+  };
 }]);
 
 app.controller('loadAllProjects', [ '$scope', function($scope) {

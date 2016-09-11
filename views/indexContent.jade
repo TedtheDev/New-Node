@@ -1,14 +1,15 @@
 div(class="container")
-  header(class="header")
-    div(class="header-text") Tyler Edmunds
-    nav(class='header-nav')
-      div(ui-sref="home" class="header-nav-button") Home
-      div(ui-sref="about" class="header-nav-button" ) About
-      div(ui-sref="portfolio" class="header-nav-button" ) Portfolio
-      div(ui-sref="github" class="header-nav-button" ) GitHub
-      div(ui-sref="contact" class="header-nav-button" ) Contact
-  div(class="row content-box" ng-controller="getTemplate")
-    nav(class="col-2 nav")
+  header(class="row header")
+    div(class="col-12 header-text") Tyler Edmunds
+    div(class="row")
+      nav(class='col-12 header-nav')
+        div(ui-sref="home" class="header-nav-button") Home
+        div(ui-sref="about" class="header-nav-button" ) About
+        div(ui-sref="portfolio" class="header-nav-button" ) Portfolio
+        div(ui-sref="github" class="header-nav-button" ) GitHub
+        div(ui-sref="contact" class="header-nav-button" ) Contact
+  div(class="content-box" ng-controller="getTemplate")
+    nav(class="nav")
       div(class="nav-drop-down-section")
         //div(ng-click="slideOut(navSlideMenu)") ++++
         //div(ng-class="navMenuClass" ng-click='toggleMobileNav=!toggleMobileNav; changeClass(navMenuClass)')
@@ -26,11 +27,6 @@ div(class="container")
           //div(ui-sref="portfolio" class="nav-test" ng-click="toggleMobileNav=!toggleMobileNav") Portfolio
           //div(ui-sref="github" class="nav-test" ng-click="toggleMobileNav=!toggleMobileNav") GitHub
           //div(ui-sref="contact" class="nav-test" ng-click="toggleMobileNav=!toggleMobileNav") Contact
-      div(class="nav-links-section")
-        div(ui-sref="home" class="nav-link") Home
-        div(ui-sref="about" class="nav-link" ) About
-        div(ui-sref="portfolio" class="nav-link" ) Portfolio
-        div(ui-sref="github" class="nav-link" ) GitHub
-        div(ui-sref="contact" class="nav-link" ) Contact
-    div(ui-view="content" class="col-10 content")
+    div(class='row')
+      div(ui-view="content" class="col-12 content")
     //div((ui-view="" class="col-10 content" ng-init="loadTemplate('home')" ng-include="serveContent")

@@ -46,12 +46,38 @@ html, body
   height: 25%
   background-color: #8e44ad
   clear: both
+  position: relative
 
 .header-text
-  font-size: 8vh
+  font-size: 28px
   color: #ecf0f1
   margin: 0 auto
   text-align: center
+
+.header-nav
+  width: 100%
+  padding-top: 25px
+  padding-bottom: 5px
+  text-align: center
+  position: absolute
+  bottom: 7%
+  left: 0
+  background-color: #d5b6e2
+
+.header-nav-button
+  display: inline-block
+  width: 0
+  height: 0
+  opacity: 0
+  border: 3px solid #000
+  border-radius: 3px
+  background-color: #8e44ad
+  color: #ecf0f1
+  text-align: center
+  &:hover
+    cursor: pointer
+  pointer-events: none
+
 
 .nav-links-section
   display: none
@@ -77,7 +103,8 @@ html, body
     width: 100%
 
 .nav-drop-down-section
-  width: 100%
+  width: 97%
+  height: 60px
 
 .nav-drop-down-select
   width: 100%
@@ -86,6 +113,7 @@ html, body
   width: 50px
   height: 40px
   position: relative
+  top: 10px
   margin: 0px 0px 0px auto
   transform: rotate(0deg);
   transition .5s ease-in-out
@@ -188,7 +216,7 @@ html, body
   height: 35px
   width: 50%
   margin: 7px auto 0 auto
-  
+
 .project-menu
   background-color: #8e44ad
   color: #ecf0f1

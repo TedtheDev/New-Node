@@ -1,8 +1,19 @@
 div
   div(class="row")
-    div(class='col-12')
-      p(class='server-content')
-        | My name is Tyler Edmunds. I graduated from Iowa State University with a Management Information Systems and International Business Degree. 
+    div(class='col-12' ng-controller='aboutControllers')
+      p(class='server-content') 
+        | I am a native of Minnesota who migrated to Iowa for school, where I went to Iowa State University. 
+        | At ISU I earned a degree in Management Information Systems and International Business and met my significant other.  
+        | During my time at Iowa State University, I studied abroad in Germany and Russia to develop my language skills in both German and Russian.  
+        | While not traveling I worked as a German language tutor, it guy, and was a member of the management information systems club.
+        | I am a social PC gamer who enjoys playing solo and with friends. 
+        | I also enjoy the outdoors playing disc golf and visiting state parks with my significant other. 
+        | We also enjoy trying new restaurants and local craft beers. 
+        | On a regular day after work, I code, game, exercise, and play with my cat. To learn more about my projects and experience visit 
+        span(class='span-to-link' ng-click="goToState('portfolio')") My Portfolio
+        | .
+        
+      p
         | I got into web development in the Summer of 2012 with my first website using HTML and CSS, <a href="http://tyleredmunds.co.nf/index.html">tyleredmunds.co.nf/index.html</a>.
         | After that I updated my website to Wordpress to learn a web content management system. I also wanted a website that had a modern look and feel, as you can see that here, <a href="http://tyleredmunds.co.nf/">tyleredmunds.co.nf</a>.
         | That fall, I was offered an internship and my project in the Summer of 2013 was using PHP, MySql, Apache, and Linux (LAMP) with the front end using Javascript and some JQuery, and of course HTML and CSS. I learned a lot about using 
@@ -21,3 +32,4 @@ div
         | I am using Stylus for a preprocessor and Jade as my template engine. Learning these new langauges as inspired myself to get more into web application development.
         | I learned some Git on Codecademy and have a github page where I have this website on there and using Openshift to host my website. 
         | I plan to work on new applications that I come up with and to challenge myself to make a fully functional and useful application.
+        

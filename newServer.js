@@ -44,6 +44,7 @@ app.use('/node_modules', express.static('node_modules'));
 app.use('/views', express.static('views'));
 app.use('/projects', express.static('views/projects'));
 app.use('/projectfiles', express.static('projectfiles'));
+app.use('/images', express.static('images'));
 
 // landing page
 app.get('/', function( req, res) {

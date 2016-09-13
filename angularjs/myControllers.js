@@ -18,9 +18,17 @@ app.controller('getPortfolioProjectInfo', ['$scope', function($scope) {
   };
   $scope.loadProjectFull = 'views/projectFull';
 
+  //test code = doesnt work, trying to close view project menu when clicking on a project
   $scope.resetProjectMenu = function(booleanToggle) {
     booleanToggle = false;
     return booleanToggle;
+  };
+}]);
+
+//Controller for the about page
+app.controller('aboutControllers', [ '$scope', '$state', function($scope, $state) {
+  $scope.goToState = function(stateName) {
+    $state.go(stateName);
   };
 }]);
 

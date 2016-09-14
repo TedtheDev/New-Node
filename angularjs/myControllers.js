@@ -18,6 +18,15 @@ app.controller('getPortfolioProjectInfo', ['$scope', function($scope) {
   };
   $scope.loadProjectFull = 'views/projectFull';
 
+  $scope.viewProjectsButtonClassName = 'project-menu-closed';
+  $scope.changeViewProjectsButtonClass = function(className) {
+    if(className == 'project-menu-closed')
+      $scope.viewProjectsButtonClassName = 'project-menu-open';
+    else
+      $scope.viewProjectsButtonClassName = 'project-menu-closed';
+
+  };
+
   //test code = doesnt work, trying to close view project menu when clicking on a project
   $scope.resetProjectMenu = function(booleanToggle) {
     booleanToggle = false;

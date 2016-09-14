@@ -2,8 +2,7 @@ div(ng-controller="getPortfolioProjectInfo" class="portfolio-full")
   div(class="row" )
     div(class="col-12")
       div(class='project-menu-holder')
-        //change to hover to show projects, not click, but mobile needs to click so maybe keep click
-        div(class="project-menu" ng-click='projectMenu=!projectMenu') View Projects
+        div(ng-class="viewProjectsButtonClassName" ng-click="projectMenu=!projectMenu; changeViewProjectsButtonClass(viewProjectsButtonClassName)") View Projects
       div(class='project-menu-nav' ng-if='projectMenu')
         div(class="project-menu-button" ui-sref='firstWebsite' ng-click='projectMenu=resetProjectMenu(projectMenu)') First Website
         div(class="project-menu-button" ui-sref='wordpress') Web Content Management System
@@ -14,5 +13,4 @@ div(ng-controller="getPortfolioProjectInfo" class="portfolio-full")
         div(class="project-menu-button" ui-sref='nodeWebsite') New Website
   div(class="row" style="height: 100%")
     div(class="col-12 project-content" ui-view="loadProject")
-    //div(class="col-12 project-content" ng-include="loadProjectFull" full-page)
     

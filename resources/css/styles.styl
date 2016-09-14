@@ -39,7 +39,7 @@ html, body
 .container
   height: 100%
   background-color: #ecf0f1
-  //overflow: auto
+  overflow-x: auto
 
 .header
   width: 100%
@@ -213,33 +213,40 @@ html, body
   margin: 1%
 
 .project-menu-holder
-  height: 35px
-  width: 50%
-  margin: 7px auto 0 auto
+  margin: 0 auto
 
-.project-menu
+.project-menu-closed, .project-menu-open
   background-color: #8e44ad
   color: #ecf0f1
   text-align: center
   width: 50%
-  height: 28px
+  min-width: 235px
+  height: 32px
   margin: 0 auto
   font-size: 22px
   border: 1px solid #000
   border-radius: 10px
   cursor: pointer
-  &:hover
-    height: 35px
+  transition: 3s linear all
+
+.project-menu-open
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
 
 .project-menu-nav
   width: 50%
+  min-width: 235px
   margin: 0 auto
   text-align: center
   border: 1px solid #000
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+
+.project-menu-button
+  margin: 2%
 
 .contact-info
   opacity: 0
-
 
 .contact-info-mobile
   opacity: 1

@@ -203,9 +203,9 @@ html, body
   height: 100%
   word-wrap: break-word
   overflow: auto
-  opacity: 0
-  animation: fadeIn 1s
-  animation-fill-mode: forwards
+  //opacity: 0
+  //animation: fadeIn 1s
+  //animation-fill-mode: forwards
 
 .content-box
   height: 100%
@@ -245,27 +245,55 @@ html, body
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;
 
-.project-menu-nav
+@keyframes animateBorder {
+  0% { background-size: 0 0, 100% 100% }
+  33% { background-size: 100% 0, 100% 100% }
+  66% { background-size: 100% 98%, 100% 100% }
+  99% { background-size: 100% 98%, 0 2px }
+}
+
+.project-menu-nav-open, .project-menu-nav-close
   width: 50%
   min-width: 235px
   margin: 0 auto
   text-align: center
-  border: 1px solid #000
+  padding: 0 3px 3px 3px
+  background-image:
+    url('data:image/gif;base64,R0lGODlhAQABAPAAAAAAAP///yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=='),
+    url('data:image/gif;base64,R0lGODlhAQABAPAAAOzw8f///yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==')
+  background-size: 0 100%, 0% 2px
+  background-repeat: no-repeat
+  background-position: top center, bottom center
+  animation: animateBorder 1s
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
 
-.project-menu-nav.ng-enter
+.project-menu-nav-open
+  animation-direction: normal
+  background-color: #000
+
+.project-menu-nav-close
+  animation-direction: reverse
+  background-color: #000
+
+.project-menu-nav-content
+  background-color: #ecf0f1
+  padding: 2px
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+
+.project-menu-nav-open.ng-enter, .project-menu-nav-close.ng-enter
   transition: 1s ease-in
   opacity: 0
 
-.project-menu-nav.ng-enter.ng-enter-active
+.project-menu-nav-open.ng-enter.ng-enter-active, .project-menu-nav-close.ng-enter.ng-enter-active
   opacity: 1
 
-.project-menu-nav.ng-leave
+.project-menu-nav-open.ng-leave, .project-menu-nav-close.ng-leave
   transition: 1s ease-in
   opacity: 1
 
-.project-menu-nav.ng-leave.ng-leave-active
+.project-menu-nav-open.ng-leave.ng-leave-active, .project-menu-nav-close.ng-leave.ng-leave-active
   opacity: 0
 
 .project-menu-button
@@ -277,6 +305,26 @@ html, body
 
 .contact-info-mobile
   opacity: 1
+
+@keyframes animateOpen {
+  to { stroke-dashoffset: 0 }
+}
+
+@keyframes animateClose {
+  to { stroke-dashoffset: 600 }
+}
+
+.svg-animate-path-open
+  stroke-dasharray: 600
+  stroke-dashoffset: 600
+  animation: animateOpen 1s linear
+  animation-fill-mode: forwards
+
+.svg-animate-path-close
+  stroke-dasharray: 600
+  stroke-dashoffset: 0
+  animation: animateClose 1s linear
+  animation-fill-mode: forwards
 
 @import "stylesMediaQueries.styl"
 @import "mobileSlideOut.styl"

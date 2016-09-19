@@ -34,6 +34,25 @@ app.controller('getPortfolioProjectInfo', ['$scope', function($scope) {
   };
 }]);
 
+app.controller('animateBorder', ['$scope', function($scope) {
+  $scope.theSVGClass = 'svg-animate-path-close';
+  $scope.changeSVGAnimateClass = function(className) {
+    if($scope.theSVGClass == 'svg-animate-path-close')
+      $scope.theSVGClass = 'svg-animate-path-open';
+    else
+      $scope.theSVGClass = 'svg-animate-path-close';
+  };
+
+  //css border with background images with colors
+  $scope.cssBorderClass = 'project-menu-nav-close';
+  $scope.changeCSSBorderClass = function(className) {
+    if($scope.cssBorderClass == 'project-menu-nav-open')
+      $scope.cssBorderClass = 'project-menu-nav-close'
+    else
+      $scope.cssBorderClass = 'project-menu-nav-open'
+  };
+}]);
+
 //Controller for the about page
 app.controller('aboutControllers', [ '$scope', '$state', function($scope, $state) {
   $scope.goToState = function(stateName) {

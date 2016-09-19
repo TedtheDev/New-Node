@@ -1,22 +1,22 @@
 div(ng-controller="getPortfolioProjectInfo" class="portfolio-full")  
   div(class="row" )
-    div(class="col-12")
+    div(class="col-12" ng-controller='animateBorder')
       div(class='project-menu-holder')
-        div(ng-class="viewProjectsButtonClassName" ng-click="projectMenu=!projectMenu; changeViewProjectsButtonClass(viewProjectsButtonClassName)") View Projects
-      //div(class='view-projet-svg')
-        //svg(class='project-menu-svg-left' width='400' height='400' transform='scale(.25,.25)')
-          //path(d="M 0 0 L 0 400" stroke="rgb(100,100,100)" stroke-width="4" fill="none" transform='scale(.25,.25)')
-          //path(d="M 400 0 L 400 400" stroke="rgb(100,100,100)" stroke-width="4" fill="none" transform='scale(.25,.25) translate(0,-400)')
-          //path(d="M 0 400 L 200 400" stroke="rgb(100,100,100)" stroke-width="4" fill="none" transform='scale(.25,.25) translate(-200)')
-          //path(d="M 400 400 L 200 400" stroke="rgb(100,100,100)" stroke-width="4" fill="none" transform='scale(.25,.25) translate(200)')
-      div(class='project-menu-nav' ng-if='projectMenu')
-        div(class="project-menu-button" ui-sref='firstWebsite' ng-click='projectMenu=resetProjectMenu(projectMenu)') First Website
-        div(class="project-menu-button" ui-sref='wordpress') Web Content Management System
-        div(class="project-menu-button" ui-sref='esss') Employee Self-Service System
-        div(class="project-menu-button" ui-sref="payrollSystem") Payroll System
-        div(class="project-menu-button" ui-sref='lampProject') LAMP Project
-        div(class="project-menu-button" ui-sref='lanProject') LAN with Firewall Project
-        div(class="project-menu-button" ui-sref='nodeWebsite') New Website
+        div(ng-class="viewProjectsButtonClassName" ng-click="projectMenu=!projectMenu; changeCSSBorderClass(cssBorderClass); changeViewProjectsButtonClass(viewProjectsButtonClassName)") View Projects
+      //div(ng-click='changeSVGAnimateClass(theSVGClass)' ) ANIMATE
+        //div(class='view-projet-svg')
+          //svg(class='project-menu-svg-left' width='400' height='400' viewBox='0 0 800 800' preserveAspectRatio = 'xMidYMin meet')
+            //path(ng-class ='theSVGClass' d="M0 0 L0 400 L200 400" stroke="rgb(100,100,100)" stroke-width="4" fill="none" )
+            //path(ng-class='theSVGClass' d="M400 0 L400 400 L200 400" stroke="rgb(100,100,100)" stroke-width="4" fill="none")
+      div(ng-class='cssBorderClass' ng-if='projectMenu')
+        div( class='project-menu-nav-content')
+          div(class="project-menu-button" ui-sref='firstWebsite' ng-click='projectMenu=!projectMenu') First Website
+          div(class="project-menu-button" ui-sref='wordpress') Web Content Management System
+          div(class="project-menu-button" ui-sref='esss') Employee Self-Service System
+          div(class="project-menu-button" ui-sref="payrollSystem") Payroll System
+          div(class="project-menu-button" ui-sref='lampProject') LAMP Project
+          div(class="project-menu-button" ui-sref='lanProject') LAN with Firewall Project
+          div(class="project-menu-button" ui-sref='nodeWebsite') New Website
   div(class="row" style="height: 100%")
     div(class="col-12 project-content" ui-view="loadProject")
     

@@ -46,10 +46,10 @@ app.controller('animateBorder', ['$scope', function($scope) {
   //css border with background images with colors
   $scope.cssBorderClass = 'project-menu-nav-close';
   $scope.changeCSSBorderClass = function(className) {
-    if($scope.cssBorderClass == 'project-menu-nav-open')
-      $scope.cssBorderClass = 'project-menu-nav-close'
+    if($scope.cssBorderClass == 'project-menu-nav-close')
+      $scope.cssBorderClass = 'project-menu-nav-open';
     else
-      $scope.cssBorderClass = 'project-menu-nav-open'
+      $scope.cssBorderClass = 'project-menu-nav-close';
   };
 }]);
 

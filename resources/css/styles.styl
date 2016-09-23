@@ -249,7 +249,14 @@ html, body
   0% { background-size: 0 0, 100% 100% }
   33% { background-size: 100% 0, 100% 100% }
   66% { background-size: 100% 98%, 100% 100% }
-  99% { background-size: 100% 98%, 0 2px }
+  100% { background-size: 100% 98%, 0 2px }
+}
+
+@keyframes animateBorder {
+  0% { background-size: 0 0, 100% 100% }
+  33% { background-size: 100% 0, 100% 100% }
+  66% { background-size: 100% 98%, 100% 100% }
+  100% { background-size: 100% 98%, 0 2px}
 }
 
 .project-menu-nav-open, .project-menu-nav-close
@@ -261,7 +268,6 @@ html, body
   background-image:
     url('data:image/gif;base64,R0lGODlhAQABAPAAAAAAAP///yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=='),
     url('data:image/gif;base64,R0lGODlhAQABAPAAAOzw8f///yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==')
-  background-size: 0 100%, 0% 2px
   background-repeat: no-repeat
   background-position: top center, bottom center
   animation: animateBorder 1s
@@ -269,10 +275,12 @@ html, body
   border-bottom-right-radius: 10px;
 
 .project-menu-nav-open
+  background-size: 0 100%, 0% 2px
   animation-direction: normal
   background-color: #000
 
 .project-menu-nav-close
+  background-size: 0 100%, 100% 100%
   animation-direction: reverse
   background-color: #000
 

@@ -34,7 +34,7 @@ app.controller('getPortfolioProjectInfo', ['$scope', function($scope) {
   };
 }]);
 
-app.controller('animateBorder', ['$scope', function($scope) {
+app.controller('animateBorder', ['$scope', '$timeout', function($scope, $timeout) {
   $scope.theSVGClass = 'svg-animate-path-close';
   $scope.changeSVGAnimateClass = function(className) {
     if($scope.theSVGClass == 'svg-animate-path-close')
@@ -45,11 +45,27 @@ app.controller('animateBorder', ['$scope', function($scope) {
 
   //css border with background images with colors
   $scope.cssBorderClass = 'project-menu-nav-close';
-  $scope.changeCSSBorderClass = function(className) {
+  $scope.changeCSSBorderClass = function(className, projectMenuBool) {
+    //var projectMenuElem = angular.element( document.querySelector( '#projectMenu' ) );
+    //var projectMenuElemTemp = angular.element( document.querySelector( '.project-menu-nav-content' ) );
+  //  projectMenuElem.empty();
     if($scope.cssBorderClass == 'project-menu-nav-close')
       $scope.cssBorderClass = 'project-menu-nav-open';
     else
       $scope.cssBorderClass = 'project-menu-nav-close';
+  //  projectMenuElem.append(projectMenuElemTemp);
+  };
+
+  $scope.projectMenu = false;
+  $scope.setDelay = function() {
+    if($scope.projectMenu == true) {
+      $timeout(function () {
+        $scope.projectMenu = false;
+      }, 300);
+    }
+    else {
+      $scope.projectMenu = true;
+    }
   };
 }]);
 

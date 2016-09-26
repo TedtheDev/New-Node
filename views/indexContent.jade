@@ -3,11 +3,16 @@ div(class="container")
     div(class="col-12 header-text") Tyler Edmunds
     div(class="row")
       nav(class='col-12 header-nav')
-        div(ui-sref="home" class="header-nav-button") Home
-        div(ui-sref="about" class="header-nav-button" ) About
-        div(ui-sref="portfolio" class="header-nav-button" ) Portfolio
-        div(ui-sref="github" class="header-nav-button" ) GitHub
-        div(ui-sref="contact" class="header-nav-button" ) Contact
+        div(ui-sref="home" class="header-nav-button") 
+          span Home
+        div(ui-sref="about" class="header-nav-button" ) 
+          span About
+        div(ui-sref="portfolio" class="header-nav-button" ) 
+          span Portfolio
+        div(ui-sref="github" class="header-nav-button" ) 
+          span GitHub
+        div(ui-sref="contact" class="header-nav-button" ) 
+          span Contact
   div(class="content-box" ng-controller="getTemplate")
     nav(class="nav")
       div(class="nav-drop-down-section")

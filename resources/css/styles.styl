@@ -65,9 +65,14 @@ html, body
   100% { transform: translateX(0%) }
 }
 
+.nav
+  width: 100%
+  height: 50%
+
 .header-nav
   width: 100%
   height: 50%
+
   text-align: center
   position: absolute
   bottom: 0%
@@ -78,18 +83,28 @@ html, body
   animation-delay: 500ms
   animation-fill-mode: forwards
 
+.header-bar
+  background-color: #000;
+  width: 100%;
+  height: 25%;
+  position: relative;
+  z-index: -1;
+  top: 60%;
+
 .header-nav-button
   display: inline-block
   width: 0
   height: 0
   opacity: 0
-  border: 3px solid #000
+  border: 10px solid #000
   border-radius: 3px
   background-color: #8e44ad
   color: #ecf0f1
   text-align: center
+  transition: transform 300ms
   &:hover
     cursor: pointer
+    transform: translate(5%, 10%);
   pointer-events: none
 
 .nav-links-section
@@ -116,8 +131,6 @@ html, body
     width: 100%
 
 .nav-drop-down-section
-  width: 97%
-  height: 60px
 
 .nav-drop-down-select
   width: 100%
@@ -126,7 +139,6 @@ html, body
   width: 50px
   height: 40px
   position: relative
-  top: 10px
   margin: 0px 0px 0px auto
   transform: rotate(0deg);
   transition .5s ease-in-out
@@ -151,12 +163,15 @@ html, body
 
 .nav-menu-mobile-toggle span:nth-child(1)
   top: 5px
+  left: 2px
 
 .nav-menu-mobile-toggle span:nth-child(2)
   top: 15px
+  left: 2px
 
 .nav-menu-mobile-toggle span:nth-child(3)
   top: 25px
+  left: 2px
 
 //-------
 .nav-menu-mobile-toggle-open span:nth-child(1)
@@ -215,7 +230,7 @@ html, body
 }
 
 @keyframes slideUpContentOnLoad {
-  0%   { transform: translateY(100%) }
+  0%   { transform: translateY(105%) }
   100% { transform: translateY(0%) }
 }
 
@@ -223,17 +238,15 @@ html, body
   height: 100%
   word-wrap: break-word
   overflow: auto
-  //opacity: 0
-  //animation: fadeIn 1s
-  //animation-fill-mode: forwards
   text-align: center
-  transform: translateY(100%)
-  animation: 1s slideUpContentOnLoad
-  animation-delay: 1s
-  animation-fill-mode: forwards
 
 .content-box
   height: 100%
+  overflow: hidden
+  transform: translateY(105%)
+  animation: 1s slideUpContentOnLoad
+  animation-delay: 1s
+  animation-fill-mode: forwards
 
 .project-button
   display: inline
@@ -332,6 +345,8 @@ html, body
 .project-menu-button
   margin: 2%
   background-color: #d9b3ff
+  &:hover
+    cursor: pointer
 
 .contact-info
   opacity: 0

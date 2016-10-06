@@ -8,6 +8,19 @@ transition-timing-cybic-bezier(n1,n2,n3,n4)
 nav-menu-mobile-transition(sec)
   -webkit-transition: sec linear all
   transition: sec lindear all
+placeHeaderNavButtons()
+  for num in 1 2 3 4 5
+    header-nav-button:nth-child(num)
+      if num == 1
+        left: 0
+      if num == 2
+        left: 20%
+      if num == 3
+        left: 40%
+      if num == 4
+        left: 60%
+      if num == 5
+        left: 80%
 
 //css
 html, body
@@ -28,7 +41,6 @@ html, body
 //mobile
 [class*="col-"]
   width: 100%
-
 
 //set rows
 .row::after
@@ -72,9 +84,8 @@ html, body
 .header-nav
   width: 100%
   height: 50%
-
   text-align: center
-  position: absolute
+  //position: absolute
   bottom: 0%
   left: 0
   transform: translateX(-100%)
@@ -87,30 +98,30 @@ html, body
   background-color: #000;
   width: 100%;
   height: 25%;
-  position: relative;
+  //position: relative;
   z-index: -1;
   top: 60%;
 
 .header-nav-button
-  display: inline-block
-  width: 0
-  height: 0
+  //display: inline-block
+  //width: 0
+  //height: 0
   opacity: 0
-  border: 10px solid #000
+  border: 4px solid #000
   border-radius: 3px
   background-color: #8e44ad
   color: #ecf0f1
   text-align: center
-  transition: transform 300ms
-  &:hover
-    cursor: pointer
-    transform: translate(5%, 10%);
   pointer-events: none
+
+.header-nav-button.active
+  background-color: blue
 
 .nav-links-section
   display: none
 
 .nav-link
+  display: inline-block
   color: #ecf0f1
   background-color: #8e44ad
   margin: 4% auto 4% auto

@@ -3,17 +3,22 @@ div(class="container")
     div(class="col-12 header-text") Tyler Edmunds
     div(class="row")
       nav(class='col-12 header-nav')
-        div(class='header-bar')
-        div(ui-sref="home" class="header-nav-button") 
-          span Home
-        div(ui-sref="about" class="header-nav-button" ) 
-          span About
-        div(ui-sref="portfolio" class="header-nav-button" ) 
-          span Portfolio
-        div(ui-sref="github" class="header-nav-button" ) 
-          span GitHub
-        div(ui-sref="contact" class="header-nav-button" ) 
-          span Contact
+        //div(class='header-bar')
+        div(class='header-nav-button-container')
+          div( id='homeNav' ui-sref="home" ng-class="headerNavButtonHome" ng-click="addActiveLinkClass('home')") 
+            span Home
+        div(class='header-nav-button-container')
+          div( id='aboutNav' ui-sref="about" ng-class="headerNavButtonAbout" ng-click="addActiveLinkClass('about')") 
+            span About
+        div(class='header-nav-button-container')
+          div(id='portfolioNav' ui-sref="portfolio" ng-class="headerNavButtonPortfolio" ng-click="addActiveLinkClass('portfolio')") 
+            span Portfolio
+        div(class='header-nav-button-container')
+          div(id='githubNav' ui-sref="github" ng-class="headerNavButtonGithub" ng-click="addActiveLinkClass('github')") 
+            span GitHub
+        div(class='header-nav-button-container')
+          div(id='contactNav' ui-sref="contact" ng-class="headerNavButtonContact" ng-click="addActiveLinkClass('contact')") 
+            span Contact
         nav(class="nav")
           div(class="nav-drop-down-section")
             div(ng-class="navMenuClass" ng-click='slideOut(navSlideMenu)')

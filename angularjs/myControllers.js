@@ -117,4 +117,28 @@ app.controller('getTemplate', ['$scope', '$filter', '$state', function($scope, $
       $scope.navMenuClass = "nav-menu-mobile-toggle"
     }
   };
+
+  var navButtonClass = 'header-nav-button';
+  $scope.headerNavButtonHome = navButtonClass;
+  $scope.headerNavButtonAbout = navButtonClass;
+  $scope.headerNavButtonPortfolio = navButtonClass;
+  $scope.headerNavButtonGithub = navButtonClass;
+  $scope.headerNavButtonContact = navButtonClass;
+  $scope.addActiveLinkClass = function(button) {
+    $scope.headerNavButtonHome = navButtonClass;
+    $scope.headerNavButtonAbout = navButtonClass;
+    $scope.headerNavButtonPortfolio = navButtonClass;
+    $scope.headerNavButtonGithub = navButtonClass;
+    $scope.headerNavButtonContact = navButtonClass;
+    if(button == 'home')
+      $scope.headerNavButtonHome = navButtonClass + ' active';
+    if(button == 'about')
+      $scope.headerNavButtonAbout = navButtonClass + ' active';
+    if(button == 'portfolio')
+      $scope.headerNavButtonPortfolio = navButtonClass + ' active';
+    if(button == 'github')
+      $scope.headerNavButtonGithub = navButtonClass + ' active';
+    if(button == 'contact')
+      $scope.headerNavButtonContact = navButtonClass + ' active';
+  };
 }]);

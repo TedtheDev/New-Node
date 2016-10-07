@@ -4,21 +4,22 @@ div(class="container")
     div(class="row")
       nav(class='col-12 header-nav')
         //div(class='header-bar')
-        div(class='header-nav-button-container')
-          div( id='homeNav' ui-sref="home" ng-class="headerNavButtonHome" ng-click="addActiveLinkClass('home')") 
-            span Home
-        div(class='header-nav-button-container')
-          div( id='aboutNav' ui-sref="about" ng-class="headerNavButtonAbout" ng-click="addActiveLinkClass('about')") 
-            span About
-        div(class='header-nav-button-container')
-          div(id='portfolioNav' ui-sref="portfolio" ng-class="headerNavButtonPortfolio" ng-click="addActiveLinkClass('portfolio')") 
-            span Portfolio
-        div(class='header-nav-button-container')
-          div(id='githubNav' ui-sref="github" ng-class="headerNavButtonGithub" ng-click="addActiveLinkClass('github')") 
-            span GitHub
-        div(class='header-nav-button-container')
-          div(id='contactNav' ui-sref="contact" ng-class="headerNavButtonContact" ng-click="addActiveLinkClass('contact')") 
-            span Contact
+        div(class='header-show')
+          div(ng-mouseenter='hoverHome=true;unanimateHome=false' ng-mouseleave='unanimateHome=true;hoverHome=false;' class='header-nav-button-container')
+            div( id='homeNav' ui-sref="home" class='header-nav-button' ng-class="{'header-nav-button animate' : hoverHome, 'header-nav-button unanimate' : unanimateHome}" ng-click="addActiveLinkClass('home')") 
+              span Home
+          div(ng-mouseenter='hoverAbout=true;unanimateAbout=false' ng-mouseleave='unanimateAbout=true;hoverAbout=false;' class='header-nav-button-container')
+            div( id='aboutNav' ui-sref="about" class='header-nav-button' ng-class="{'header-nav-button animate' : hoverAbout, 'header-nav-button unanimate' : unanimateAbout}" ng-click="addActiveLinkClass('about')") 
+              span About
+          div(ng-mouseenter='hoverPortfolio=true;unanimatePortfolio=false' ng-mouseleave='unanimatePortfolio=true;hoverPortfolio=false;' class='header-nav-button-container')
+            div(id='portfolioNav' ui-sref="portfolio" class='header-nav-button' ng-class="{'header-nav-button animate' : hoverPortfolio, 'header-nav-button unanimate' : unanimatePortfolio}" ng-click="addActiveLinkClass('portfolio')") 
+              span Portfolio
+          div(ng-mouseenter='hoverGithub=true;unanimateGithub=false' ng-mouseleave='unanimateGithub=true;hoverGithub=false;' class='header-nav-button-container')
+            div(id='githubNav' ui-sref="github" class='header-nav-button' ng-class="{'header-nav-button animate' : hoverGithub, 'header-nav-button unanimate' : unanimateGithub}" ng-click="addActiveLinkClass('github')") 
+              span GitHub
+          div(ng-mouseenter='hoverContact=true;unanimateContact=false' ng-mouseleave='unanimateContact=true;hoverContact=false;' class='header-nav-button-container')
+            div(id='contactNav' ui-sref="contact" class='header-nav-button' ng-class="{'header-nav-button animate' : hoverContact, 'header-nav-button unanimate' : unanimateContact}" ng-click="addActiveLinkClass('contact')") 
+              span Contact
         nav(class="nav")
           div(class="nav-drop-down-section")
             div(ng-class="navMenuClass" ng-click='slideOut(navSlideMenu)')

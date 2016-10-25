@@ -38,7 +38,7 @@ app.set('views', 'views');
 app.set('view engine', 'jade');
 
 //set directories for html and css
-app.use('/css', express.static('public/stylesheets'));
+//app.use('/css', express.static('public/stylesheets'));
 app.use('/angularjs', express.static('angularjs'));
 app.use('/node_modules', express.static('node_modules'));
 app.use('/views', express.static('views'));

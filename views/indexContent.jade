@@ -1,7 +1,7 @@
-div(class="container" ng-controller="getTemplate")
+div(style="height:100%;" ng-controller="getTemplate")
   header(class="row header" )
     div(class="col-12 header-text") Tyler Edmunds
-  div(class="row ")
+  div(class="row nav-bar-height")
     nav(class='col-12 header-nav')
       //div(class='header-bar')
       div(class='header-show')
@@ -21,11 +21,12 @@ div(class="container" ng-controller="getTemplate")
           div(id='contactNav' ui-sref="contact" class='header-nav-button' ng-class="{'header-nav-button animate' : hoverContact, 'header-nav-button unanimate' : unanimateContact}" ng-click="addActiveLinkClass('contact')") 
             span Contact
   div(class="content-box" )
-    div(class='row')
-      nav(class="nav")
+    div(class='row hamburger-height')
+      nav(class="col-12 nav")
         div(class="nav-drop-down-section")
           div(ng-class="navMenuClass" ng-click='slideOut(navSlideMenu)')
             span hamburger top
             span hamber mid
             span hamburger bot
+    div(class='row content-height')
       div(ui-view="content" class="col-12 content")

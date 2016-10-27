@@ -28,6 +28,7 @@ html, body
   width: 100%
   margin: 0
   padding: 0
+  overflow: hidden
 
 *
   box-sizing: border-box
@@ -52,7 +53,6 @@ html, body
   height: 100%
   width: 100%
   background-color: #ecf0f1
-  //overflow-x: auto
   font-family: 'Open Sans', sans-serif
 
 @keyframes transitionInHeaderOnLoad {
@@ -62,7 +62,7 @@ html, body
 
 .header
   width: 100%
-  //height: 10%
+  height: 10%
   background-color: #8e44ad
   clear: both
   position: relative
@@ -73,7 +73,8 @@ html, body
   background-color: #d5b6e2
 
 .header-text
-  font-size: 36px
+  font-size: 5vh
+  height: 100%
   color: #ecf0f1
   margin: 0 auto
   text-align: center
@@ -90,7 +91,7 @@ html, body
 
 .header-nav
   width: 100%
-  height: 50%
+  height: 100%
   text-align: center
   //position: absolute
   bottom: 0%
@@ -126,6 +127,12 @@ html, body
 
 .header-nav-button.active
   background-color: blue
+
+.hamburger-height
+  height: 15%
+
+.nav-bar-height
+  height: 2%
 
 .nav-links-section
   display: none
@@ -258,13 +265,15 @@ html, body
 .content
   height: 100%
   word-wrap: break-word
-  overflow: auto
+  overflow-y: auto
   text-align: center
 
+.content-height
+  height: 85%
+
 .content-box
-  height: 100%
+  height: 80%
   width:100%
-  overflow: hidden
   transform: translateY(105%)
   animation: 1s slideUpContentOnLoad
   animation-delay: 1s
@@ -344,12 +353,12 @@ html, body
 
 .project-menu-nav-content
   background-color: #ecf0f1
-  padding: 2px
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
 
 // leaving ng-scope project-menu-nav-open ng-animate ng-leave ng-leave-active
 //entering ng-scope project-menu-nav-open-add ng-animate project-menu-nav-open ng-enter ng-project-menu-nav-open-add ng-enter-active ng-project-menu-nav-open-add-active project-menu-nav-open-add-active
+/*
 .project-menu-nav-open.ng-enter, .project-menu-nav-close.ng-enter
   transition: 500ms ease-in
   opacity: 0
@@ -363,10 +372,32 @@ html, body
 
 .project-menu-nav-open.ng-leave.ng-leave-active, .project-menu-nav-close.ng-leave.ng-leave-active
   opacity: 0
+*/
+//-----
+.project-menu-nav-open.ng-enter, .project-menu-nav-open.ng-leave
+  transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 500ms
 
+.project-menu-nav-open.ng-enter,.project-menu-nav-open.ng-leave.ng-leave-active
+  opacity:0;
+
+.project-menu-nav-open.ng-leave, .project-menu-nav-open.ng-enter.ng-enter-active
+  opacity:1
+
+//-
+.project-menu-nav-close.ng-enter, .project-menu-nav-close.ng-leave
+  transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 100ms
+
+.project-menu-nav-close.ng-enter,.project-menu-nav-close.ng-leave.ng-leave-active
+  opacity:0;
+
+.project-menu-nav-close.ng-leave, .project-menu-nav-close.ng-enter.ng-enter-active
+  opacity:1
+
+//------
 .project-menu-button
-  margin: 2%
   background-color: #d9b3ff
+  border: 1px solid #000
+  margin: 0
   &:hover
     cursor: pointer
 

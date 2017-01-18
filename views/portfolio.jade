@@ -1,13 +1,9 @@
 div(ng-controller="getPortfolioProjectInfo" class="portfolio-full")  
   div(class="row" )
     div(class="col-12" ng-controller='animateBorder')
+      //Animate border around View Projects button inspired by http://codepen.io/realjameal/pen/jPxXGY, Animated border tracing A PEN BY Jameal G
       div(class='project-menu-holder')
         div(ng-class="viewProjectsButtonClassName"  ng-click="setDelay(); changeCSSBorderClass(cssBorderClass); changeViewProjectsButtonClass(viewProjectsButtonClassName)") View Projects
-      //div(ng-click='changeSVGAnimateClass(theSVGClass)' ) ANIMATE
-        //div(class='view-projet-svg')
-          //svg(class='project-menu-svg-left' width='400' height='400' viewBox='0 0 800 800' preserveAspectRatio = 'xMidYMin meet')
-            //path(ng-class ='theSVGClass' d="M0 0 L0 400 L200 400" stroke="rgb(100,100,100)" stroke-width="4" fill="none" )
-            //path(ng-class='theSVGClass' d="M400 0 L400 400 L200 400" stroke="rgb(100,100,100)" stroke-width="4" fill="none")
       div(ng-class='cssBorderClass' ng-if='projectMenu')
         div(class='project-menu-nav-content' )
           div(class="project-menu-button" ui-sref='firstWebsite' ng-click='setDelay(); changeCSSBorderClass(cssBorderClass); changeViewProjectsButtonClass(viewProjectsButtonClassName)') First Website

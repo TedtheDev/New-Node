@@ -5,18 +5,15 @@ html(lang="en-US")
     //- Load AngularJS
     script(src='node_modules/angular/angular.js')
     script(src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.js" type='text/javascript') //ngAnimate
-    //script(src="//ajax.googleapis.com/ajax/libs/angularjs/X.Y.Z/angular-route.js" type='text/javascript') //ngRoute
     script(src="node_modules/angular-ui-router/release/angular-ui-router.min.js")
     
     meta(name="viewport" content="width=device-width, initial-scale=1")
+  
     //- Load CSS from css folder
     link(href='./css/styles.css' rel='stylesheet')
     link(href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet")
     link(rel="stylesheet" href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css')
-    //href="./css/font-awesome.min.css")
     
-    //fullPage.js directive
-    //script(scr='node_modules/angular-fullpage.js/angular-fullpage.js')
     
   body(ng-app="myApp" ng-controller="mobileMenuController")
     div(ui-view="mobileMenu")

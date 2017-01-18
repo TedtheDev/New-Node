@@ -3,7 +3,6 @@ div(style="height:100%;" ng-controller="getTemplate")
     div(class="col-12 header-text") Tyler Edmunds
   div(class="row nav-bar-height")
     nav(class='col-12 header-nav')
-      //div(class='header-bar')
       div(class='header-show')
         div(ng-mouseenter='hoverHome=true;unanimateHome=false' ng-mouseleave='unanimateHome=true;hoverHome=false;' class='header-nav-button-container')
           div( id='homeNav' ui-sref="home" class='header-nav-button' ng-class="{'header-nav-button animate' : hoverHome, 'header-nav-button unanimate' : unanimateHome}" ng-click="addActiveLinkClass('home')") 

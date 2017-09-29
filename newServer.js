@@ -1,3 +1,5 @@
+'use strict'
+
 //setup
 var express = require('express');
 var app = express();
@@ -61,27 +63,11 @@ app.get('/projects/:name', function (req, res) {
   res.render(__dirname + '/views/projects/' + name);
 });
 
+app.get('*', (req, res) => {
+    res.render(path.resolve(__dirname, '/views/index'));
+});
+
 //listening
 app.listen(server_port, server_ip_address, function() {
   console.log('Listening on ' + server_ip_address + ', server port ' + server_port);
-});
-
-//api to get restaurants
-app.get('/api/restaurants', function(req, res) {
-  var MongoClient = require("mongodb").MongoClient;
-  var assert = require("assert");
-  var ObjectId = require("mongodb").ObjectId;
-  var url = "mongodb://localhost:27017/test";
-  var docArray = new Array();
-
-  MongoClient.connect(url, function(err, db) {
-      assert.equal(null, err);
-      db.collection("restaurants").find().limit(5).toArray(function(err, docs) {
-        if(err)
-          throw err;
-        else
-          res.json(docs);
-        db.close();
-      });
-    });
 });
